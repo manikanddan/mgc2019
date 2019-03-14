@@ -1,0 +1,172 @@
+ .Absolute-Center { 
+  height: 70%; /* Set your own height: percents, ems, whatever! */
+  width: 80%; /* Set your own width: percents, ems, whatever! */
+  overflow: auto; /* Recommended in case content is larger than the container */
+  margin: auto; /* Center the item vertically & horizontally */
+  position: absolute; /* Break it out of the regular flow */
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+  background-color: #000;
+}
+
+/* //////////////////////////////////////// */
+/* Make sure our center blocks stay in their container! */
+.Center-Container { position: relative; }
+
+
+/* //////////////////////////////////////// */
+/* Fixed floating element within viewport */
+.Absolute-Center.is-Fixed { 
+  position: fixed;
+  z-index: 999;
+   font-size:4vw;
+   text-align: center;
+    margin-left: auto ;
+  margin-right: auto ;
+}
+
+@media screen and (max-width: 967px) {
+  .Absolute-Center.is-Fixed  {
+   font-size:3vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+ .Absolute-Center.is-Fixed  {
+    font-size: 26px;
+   
+  }
+}
+
+  
+
+ * {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.skillcolumn {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.skillrow {
+  margin: 0 -5px; 
+  position:absolute;
+  left:10%;
+  height:60%;
+  top:20%;
+  border: 5px solid red; 
+  width:80%;
+  background-color: #ccc;
+
+}
+
+/* Clear floats after the columns */
+.skillrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .skillcolumn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.skillcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+
+body {
+
+  color: #666;
+}
+/* STRUCTURE */
+.projwrapper {
+  padding: 5px;
+  max-width: 1080px;
+  width: 70%;
+  margin: 20px auto;
+  height: 60%;
+}
+
+.projcolumns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+.projcolumn {
+  flex: 1;
+  border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
+}
+.projcolumn:first-child {
+  margin-left: 0;
+}
+.projcolumn:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .projcolumns .projcolumn {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+  .projcolumns .projcolumn:nth-last-child(2) {
+    margin-right: 0;
+  }
+  .projcolumns .projcolumn:last-child {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .projcolumns .projcolumn {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+
+
+.testcontainer{
+    display: flex;
+     width: 700px ;
+  margin-left: auto ;
+  margin-right: auto ;
+    height: 60%;
+    border:5px solid red; 
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+   
+}
+@media screen and (max-width: 967px) {
+  .testcontainer  {
+   font-size:2vw;
+  
+  }
+}
+
+@media screen and (max-width: 600px) {
+ .testcontainer  {
+    font-size: 26px;
+  
+  margin-left: auto ;
+  margin-right: auto ;
+   
+  }
+}
